@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="js/mediaelement/mediaelementplayer.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+
+    <!-- begin twitter summary card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="">
+
+    <!-- Social sharing meta -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+
+    <!-- Schema.org structured data -->
+    <script data-schema="NewsArticle" type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/* seo.url */"
+      },
+      "headline": "/* seo.seo_title */",
+      "image": {
+        "@type": "ImageObject",
+        "url": "/* seo.image */"
+      },
+      "dateCreated": "/* seo.date */",
+    "datePublished": "/* seo.date + 'T' + seo.time */",
+      "author": {
+        "@type": "Person",
+        "name": "/* seo.author */"
+      },
+      "description": "/* seo.description */"
+    }
+    </script>
+
+
+    <title>In Your Hands | Elizabeth Moss</title>
+  </head>
+  <body>
+    
+    
+    
+    <div class="hero" role="banner">
+      <header class="justify-content-center text-center font-weight-bold d-flex flex-column align-items-center vh-100">
+        
+        <div class="shade">
+          <h1 class="display-5 font-weight-bold">In Your Hands</h1>
+          <h3>Subtitle here</h3>
+        </div>
+        
+      </header>
+    </div>
+    
+    <section role="main" class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 col-sm-8 col-md-6">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus auctor vulputate magna in pretium. Suspendisse urna sem, consequat eu sapien in, placerat efficitur tortor. Sed bibendum ipsum in elit pharetra, et imperdiet enim aliquam. Sed porta nulla at finibus pulvinar. In eu nisi nunc. Pellentesque imperdiet odio non laoreet eleifend. Suspendisse velit ipsum, sollicitudin eget lorem vitae, blandit venenatis felis. Donec sit amet risus est. Aliquam vitae lorem eget enim efficitur aliquet. Quisque sed dui quis nisl tincidunt consectetur. Nulla consectetur sed ex vitae euismod. Vestibulum bibendum nibh ex, nec semper nisl volutpat id. Aliquam erat volutpat. Aliquam erat volutpat.</p>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+
+    <!-- Quiz holder -->
+    <section role="main container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 col-sm-8 col-md-6">
+          <div id="quiz-holder"></div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+   
+    
+    
+    <footer class="my-5 text-center">
+      <p>Website by Elizabeth Moss.</p>
+      <nav class="socialmedia text-center">
+        <a href="#" target="_blank" title="Twitter"><img src="assets/social-media-icons/twitter-black.svg" alt="Social Media Icon" class="d-inline p-2" width="40" height="auto"></a>
+        <a href="#" target="_blank" title="Instagram"><img src="assets/social-media-icons/instagram-black.svg" alt="Social Media Icon" class="d-inline p-2" width="40" height="auto"></a>
+      </nav>    
+    </footer>
+    
+    
+    
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<!--    <script src="js/jquery-quiz.js?v=2"></script>-->
+    <script>
+      jQuery(document).ready(function($){
+        
+
+        const adventure = [
+          {
+            "id": 1,
+            "title": "Hey, are you up?.",
+            "who": "from them",
+            "choices": [
+                {"option": "Yes, I'm awake", "delay":0, "ifChosenGoTo":2},
+                {"option": "No, I'm asleep", "delay":0, "ifChosenGoTo":2}
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Yeah, I'm awake. What do you want? Why are you bothering me?.",
+            "who": "from me",
+            "delay": 0.8,
+            "goto": 3
+          },
+          {
+            "id": 3,
+            "title": "I need to tell you something important. I've been dealing with some issues lately and I wanted to get your take.",
+            "who": "from them",
+            "delay": 0.8,
+            "goto": 4
+          },
+          {
+            "id": 4,
+            "title": "I think I need some help.",
+            "who": "from them",
+            "choices": [
+                {"option": "Of course!", "delay":0, "ifChosenGoTo":5},
+            ]
+          },
+          {
+            "id": 5,
+            "title": "I'm always here for you. What's going on?",
+            "who": "from you",
+            "delay": 2,
+            "goto": 6
+          },
+          {
+            "id": 6,
+            "title": "I'm in a dangerous situation.",
+            "who": "from them"
+          }
+        ];
+        
+        
+        $("#quiz-holder").chooseYourOwnAdventure(adventure);
+        
+        
+
+      });
+    </script>
+  </body>
+</html>
